@@ -16,7 +16,9 @@
     <main class="main" id="projects">
       <div class="toolbar">
         <h1 class="title">Проекты</h1>
-        <FilterInput v-model="searchQuery" />
+        <div class="filter-row">
+          <FilterInput v-model="searchQuery" />
+        </div>
       </div>
 
       <ProjectList :projects="filteredProjects" />
@@ -166,10 +168,9 @@ export default {
 
 .toolbar {
   display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 24px;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 16px;
   margin-bottom: 24px;
 }
 
@@ -178,6 +179,13 @@ export default {
   font-size: 28px;
   font-weight: 600;
   color: var(--color-dark-blue);
+}
+
+.filter-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+  width: 100%;
 }
 
 @media (max-width: 860px) {

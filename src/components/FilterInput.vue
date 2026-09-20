@@ -45,7 +45,6 @@ export default {
   flex-direction: column;
   gap: 8px;
   width: 100%;
-  max-width: 360px;
 }
 
 .label {
@@ -60,8 +59,8 @@ export default {
   box-sizing: border-box;
   padding: 0 16px;
   border-radius: 12px;
-  border: 1.5px solid var(--color-dark);
-  background-color: var(--color-white);
+  border: 1px solid var(--color-dark);
+  background-color: transparent;
   color: var(--color-dark);
   font-family: inherit;
   font-size: 14px;
